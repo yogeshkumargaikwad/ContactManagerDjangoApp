@@ -1,0 +1,12 @@
+threading
+unittest
+ConnectingTestCase
+skip_before_postgres
+psycopg2
+ISOLATION_LEVEL_SERIALIZABLE
+STATUS_BEGIN
+STATUS_READY
+TransactionTests
+DeadlockSerializationTests
+QueryCancellationTests
+test_suite

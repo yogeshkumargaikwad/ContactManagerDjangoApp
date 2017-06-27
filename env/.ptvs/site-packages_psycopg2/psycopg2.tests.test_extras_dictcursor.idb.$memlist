@@ -1,0 +1,10 @@
+time
+timedelta
+psycopg2
+unittest
+ConnectingTestCase
+skip_before_postgres
+skip_if_no_namedtuple
+ExtrasDictCursorTests
+NamedTupleCursorTest
+test_suite

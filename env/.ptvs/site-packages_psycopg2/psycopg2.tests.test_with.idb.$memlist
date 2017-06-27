@@ -1,0 +1,8 @@
+psycopg2
+ext
+unittest
+ConnectingTestCase
+WithTestCase
+WithConnectionTestCase
+WithCursorTestCase
+test_suite

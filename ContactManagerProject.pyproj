@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>ContactManagerProject</Name>
+    <RootNamespace>ContactManagerProject</RootNamespace>
+    <InterpreterId>{c33df3eb-49bd-40e5-ad2a-466fdbdb95bd}</InterpreterId>
+    <InterpreterVersion>3.4</InterpreterVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>0c13733f-c562-4e91-945d-9b563604ac35</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ContactManagerApp\forms.py" />
+    <Compile Include="ContactManagerApp\models.py" />
+    <Compile Include="ContactManagerApp\tests.py" />
+    <Compile Include="ContactManagerApp\views.py" />
+    <Compile Include="ContactManagerApp\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="ContactManagerProject\__init__.py" />
+    <Compile Include="ContactManagerProject\settings.py" />
+    <Compile Include="ContactManagerProject\urls.py" />
+    <Compile Include="ContactManagerProject\wsgi.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ContactManagerApp\" />
+    <Folder Include="ContactManagerApp\static\" />
+    <Folder Include="ContactManagerApp\static\ContactManagerApp\" />
+    <Folder Include="ContactManagerApp\static\ContactManagerApp\content\" />
+    <Folder Include="ContactManagerApp\static\ContactManagerApp\fonts\" />
+    <Folder Include="ContactManagerApp\static\ContactManagerApp\scripts\" />
+    <Folder Include="ContactManagerApp\templates\" />
+    <Folder Include="ContactManagerApp\templates\ContactManagerApp\" />
+    <Folder Include="ContactManagerProject\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\delete_contact.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\manage_employee.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\manage_contact.html" />
+    <Content Include="requirements.txt" />
+    <Content Include="db.sqlite3" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\content\bootstrap.css" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\content\bootstrap.min.css" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\content\site.css" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\bootstrap.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\bootstrap.min.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery-1.10.2.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery-1.10.2.min.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery-1.10.2.min.map" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery.validate.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery.validate.min.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\modernizr-2.6.2.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\respond.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\respond.min.js" />
+    <Content Include="ContactManagerApp\static\ContactManagerApp\scripts\_references.js" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\about.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\contact.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\index.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\layout.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\login.html" />
+    <Content Include="ContactManagerApp\templates\ContactManagerApp\loginpartial.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="readme.mht">
+      <SubType>WebBrowser</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>{c33df3eb-49bd-40e5-ad2a-466fdbdb95bd}</Id>
+      <BaseInterpreter>{9a7a9026-48c1-4688-9d5d-e5699d47d074}</BaseInterpreter>
+      <Version>3.4</Version>
+      <Description>env (Python 64-bit 3.4)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>Amd64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,26 @@
+﻿{% extends "ContactManagerApp/layout.html" %}
+
+{% block content %}
+<script>    
+    $('document').ready(function(){
+        $('#submitButton').click(function(event){
+            event.preventDefault(); //so that we stop normal form submit.
+            $.ajax({
+                url: 'employee',
+                type: 'post',
+                dataType: 'json',
+                data: $('form#employeeForm').serialize(),
+                success: function (data) {
+                    console.log(data);
+                }
+            });
+        });
+    });
+</script>
+    <h1>New Contact</h1>
+    <form id="employeeForm">
+        {% csrf_token %}
+        <input type="text" name="name" id="name" />
+        <input type="submit" value="submit" id="submitButton" />
+    </form>
+{% endblock %}

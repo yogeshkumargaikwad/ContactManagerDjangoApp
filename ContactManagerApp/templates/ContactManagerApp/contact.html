@@ -1,0 +1,71 @@
+{% extends "ContactManagerApp/layout.html" %}
+
+{% block content %}
+
+<script>
+    $('document').ready(function () {        
+        var id = 0;
+        var tr = null;
+        $('a.delete').click(function () {
+            id = $(this).attr('data-cid');
+            tr = $(this).parent().parent();
+            $('#confirm').modal('show');
+
+        });
+        $('#delete').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "/contact/deletecontact/" + id,
+                success: function (data) {
+                    console.log('In success with Data: ' + data);
+                    tr.remove();
+                }
+            });
+        });       
+    });
+</script>
+<h3> {{ title }}</h3>
+<form action="{% url 'managecontact' '0' %}" method="get">
+    <input type="submit" class="btn btn-primary" value="Add"/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile No.</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for contact in lstContacts %}
+            <tr>
+                <th scope="row"> {{ forloop.counter }}</th>        
+                <td>{{contact.FirstName}}</td>
+                <td>{{contact.LastName}}</td>
+                <td>{{contact.Email}}</td>
+                <td>{{contact.MobileNo}}</td>
+                <td colspan="2">
+                    <a href="{% url 'managecontact' contact.id  %}" class="glyphicon glyphicon-pencil" role="button"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#" data-target="#confirm" data-cid="{{contact.id}}" class="delete glyphicon glyphicon-trash" role="button"></a>
+                </td>
+            </tr> 
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+<div id="confirm" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h4>Are you sure?</h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-danger" id="delete">Delete</button>
+                <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>  
+</div>
+{% endblock %}

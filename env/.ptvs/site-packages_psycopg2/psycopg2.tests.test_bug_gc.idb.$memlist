@@ -1,0 +1,7 @@
+psycopg2
+unittest
+gc
+ConnectingTestCase
+skip_if_no_uuid
+StolenReferenceTestCase
+test_suite
